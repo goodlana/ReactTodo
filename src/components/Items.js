@@ -59,6 +59,7 @@ const Text = styled.div`
   ${props => 
     props.done && //prop.done이 true면 글자색을 회색으로 변경
     css `
+      text-decoration-line: line-through;
       color: #ced4da 
     `}
 `

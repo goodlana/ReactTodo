@@ -4,22 +4,22 @@ import React, { useReducer, createContext, useContext, useRef } from 'react';
 const initialTodos = [
   {
     id: 1,
-    text:"프로젝트 생성하기",
+    text:"코딩하기",
     done: true
   },
   {
     id: 2,
-    text: '컴포넌트 스타일링하기',
+    text: '리액트 배우기',
     done: true
   },
   {
     id: 3,
-    text: 'Context 만들기',
+    text: '잘 먹기',
     done: false
   },
   {
     id: 4,
-    text: '기능 구현하기',
+    text: '화이팅 하기',
     done: false
   }
 ]
@@ -40,6 +40,15 @@ function todoReducer (state, action) {
       return state.filter(todo =>
         todo.id !== action.id //action.id야!!
       )
+    case "ALL":
+      return state.map(todo => 
+        todo.isFiltered === true ? {...todo, isFiltered: false} : todo)
+    case "TODO": 
+      return state.map(todo => 
+        todo.done === true ? {...todo, isFiltered: true} : {...todo, isFiltered: false})
+    case "DONE":
+      return state.map(todo =>
+        todo.done === false ? {...todo, isFiltered: true} : {...todo, isFiltered: false})
     default:
       throw new Error(`Unhandled action type: ${action.type}`)
   }
