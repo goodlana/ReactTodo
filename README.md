@@ -2,8 +2,6 @@
 ### 소개
 리액트 학습용 To Do List입니다.
 
-![](https://images.velog.io/images/goodlana/post/3f5001f5-bfd8-4f34-84c6-d1f8da185527/%EB%A6%AC%EC%95%A1%ED%8A%B8%ED%88%AC%EB%91%90.gif)
-
 ### 적용사항
 - 날짜 변경 (Date함수)
 - 할 일 작성 버튼 변환 css 애니메이션 적용 및 구현
